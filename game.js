@@ -86,7 +86,7 @@ function obstacle(){
 	this.height=Math.floor(minHeight+Math.random()*(maxHeight-minHeight+1));
 	this.width=Math.floor(minWidth+Math.random()*(maxWidth-minWidth+1));
 	this.x=1200;
-	this.y=gamearea.canvas.height-this.height;
+	this.y=gamearea.canvas.height - this.height;
 	this.index=Math.floor(Math.random() * colors.length);
 	this.color=colors[this.index];
 	this.draw=function(){
@@ -127,7 +127,7 @@ var gamearea={
 			gamearea.frame=0;
 		}
 		for(i=0;i<myObstacles.length;i++){
-			myObstacles[i].x-=1;
+			myObstacles[i].x-=1; //to move obstacle
 			myObstacles[i].draw();
 		}
 		player.newPos();
@@ -142,6 +142,5 @@ var gamearea={
 	stop:function(){
 		clearInterval(this.interval);
 		alert("Game over (*_*)");
-		audio1.play();
 	}
 }
