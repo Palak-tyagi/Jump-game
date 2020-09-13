@@ -30,8 +30,8 @@ function everyinterval(n){
 	return false;
 }
 
-function jump(e){
-	if(e.keyCode == 32){
+function jump(spacebar){
+	if(spacebar.keyCode == 32){
 	player.speedY= -2;
 }
 }
